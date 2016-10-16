@@ -1,0 +1,65 @@
+html {
+    color:#333;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,img{
+    margin:0;
+    padding:0;
+}
+body,button,input,select,textarea {
+    font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Source Han Sans CN", sans-serif;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display:block;
+    margin:0;
+    padding:0;
+}
+audio,canvas,video {
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+img {
+    border:0;
+    max-width:100%;
+    height:auto;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+button, iframe {
+    border:0 none;
+}
+
+a {
+    &:link,
+    &:visited {
+        color:#777;
+        text-decoration:none;
+    }
+
+    &:hover,
+    &:active {
+        color:#00BBFF;
+        text-decoration:none;
+    }
+}
+
+.clearfix {
+    *zoom:1;
+    &:before,
+    &:after {
+        content:"";
+        display:table;
+    }
+
+    &:after {
+        clear:both;
+    }
+}
+
+.fl{float:left;}
+.fr{float:right;}
+.cb{clear:both;}

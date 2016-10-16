@@ -1,0 +1,38 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+#rss: /atom.xml
+
+# Content
+excerpt_link: 继续阅读…
+fancybox: true
+
+# Sidebar
+#sidebar: right
+widgets:
+- category
+- tag
+- tagcloud
+- archive
+- recent_posts
+
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics:
+#favicon: /favicon.png
+
+# Generate RSS
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+
+# Duoshuo
+duoshuo_shortname:

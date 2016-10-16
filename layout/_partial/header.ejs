@@ -1,0 +1,17 @@
+<div class="logo">
+    <h1 class="title">
+        <a href="<%- config.root %>"><%= config.title %></a>
+    </h1>
+    <h2 class="description">
+        <a href="<%- config.root %>">
+            <% if (config.subtitle){ %><%= config.subtitle %><% } %>
+        </a>
+    </h2>
+</div>
+<nav class="nav">
+    <ul class="clearfix">
+        <% for (var i in theme.menu){ %>
+        <li><a href="<%- theme.menu[i] %>"><%= __( i ) %></a></li>
+        <% } %>
+    </ul>
+</nav>

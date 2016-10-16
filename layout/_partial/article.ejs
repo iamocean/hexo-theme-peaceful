@@ -1,0 +1,44 @@
+<article class="<%= item.layout %>">
+  <% if (item.photos){ %>
+    <%- partial('post/gallery') %>
+  <% } %>
+  <div class="post-content">
+    <header class="post-hd">
+      <%- partial('post/title') %>
+      <% if (item.layout != 'page'){ %>
+        <div class="icon"></div>
+        <time class="date" datetime="<%= item.date.toDate().toISOString() %>">日期：<a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+        <%- partial('post/category') %>
+      <% } %>
+    </header>
+    <div class="entry markdown-body post-bd">
+      <% if (item.excerpt && index){ %>
+        <%- item.excerpt %>
+      <% } else { %>
+        <%- item.content %>
+      <% } %>
+    </div>
+    <footer class="post-ft">
+      <% if (index){ %>
+        <% if (item.excerpt){ %>
+          <div class="more">
+            <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
+          </div>
+        <% } %>
+
+        <% if (item.comment && config.disqus_shortname){ %>
+        <div class="alignright">
+          <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
+        </div>
+        <% } %>
+
+      <% } else { %>
+
+        <%- partial('post/tag') %>
+      <% } %>
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<%- partial('comment') %>
